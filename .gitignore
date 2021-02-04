@@ -11,3 +11,4 @@ package-lock.json
 
 # .zat Zendesk files
 .zat
+style.css
