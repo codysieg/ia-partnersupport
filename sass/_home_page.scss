@@ -1,0 +1,102 @@
+.homepage{
+    .homepage-search{
+        background-color: $home-page-search-color;
+
+        margin-bottom: 0;
+        padding-bottom: 40px;
+        padding-bottom: 40px;
+
+        .hero-inner {
+            max-width: 720px;
+        }
+
+        .hero-title {
+            color: $brand-text-color;
+            font-size: $h1-text-size;
+            margin-top: 0px;
+            margin-bottom: 25px;
+        }
+
+        .search {
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid #FFFFFF;
+            box-sizing: border-box;
+            padding-left: 40px;
+            padding-right: 20px;
+            background-color: #FFFFFF;
+
+            font-size: 16px;
+            padding-left: 0px;
+            width: 530px;
+
+            #query {
+                max-width: 100%;
+                color: rgb(71, 71, 71);
+                height: 46px;
+            }
+
+            #query::placeholder {
+                font-size: 16px;
+            }
+        }
+
+        .search-icon {
+            top: 94px;
+        }
+
+        .search input[type="submit"] {
+            position: absolute;
+            right: -180px;
+            height: 100%;
+            min-width: 165px;
+            margin: 16px 0;
+            background-color: #FFFFFF;
+            border: 1px solid $home-page-search-color;
+            outline: 0;
+            color: $home-page-search-color
+
+        }
+
+        .search input[type="submit"]:hover {
+            pointer-events: none;
+        }
+    }
+    
+    .homepage-featured-articles {
+        background-color: $home-page-search-color !important;
+
+        .container {
+            margin: 0 auto;
+
+            .blocks-item {
+                border: 1px solid #FFFFFF;
+                background-color: $home-page-search-color;
+                height: 304px;
+                transition: box-shadow 450ms;
+
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+
+                .blocks-item-title {
+                    color: #FFFFFF;
+                }
+
+                .blocks-item-description {
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    .container{
+        margin-top: 50px;
+    }
+}
