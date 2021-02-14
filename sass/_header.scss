@@ -4,5 +4,21 @@
     background-color: $home-page-search-color;
     .header{
         background-color: $home-page-search-color;
+
+        .logo img{
+            min-width: 200px;
+            max-width: 200px;
+        }
+
+        .nav {
+            a {
+                font-family: $text-font;
+                color: $brand-text-color;
+            }
+            svg {
+                height: 12px;
+                width: 12px;
+            }
+        }
     }
 }

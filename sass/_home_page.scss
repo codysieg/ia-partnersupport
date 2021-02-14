@@ -8,6 +8,32 @@
 
         .hero-inner {
             max-width: 720px;
+
+            .hero-popular-help-topics {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                color: #FFFFFF;
+                margin: 16px 0;
+
+                    a {
+                        display: block;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #FFFFFF;
+                        text-align: center;
+                    }
+                    .order-1 {
+                        order: 1;
+                    }
+                    .order-2 {
+                        order: 2;
+                    }
+                    .order-3 {
+                        order: 3;
+                    }
+            }
         }
 
         .hero-title {
@@ -15,6 +41,7 @@
             font-size: $h1-text-size;
             margin-top: 0px;
             margin-bottom: 25px;
+            font-weight: 600;
         }
 
         .search {
@@ -53,18 +80,24 @@
             position: absolute;
             right: -180px;
             height: 100%;
-            min-width: 165px;
+            min-width: 166px;
             margin: 16px 0;
             background-color: #FFFFFF;
             border: 1px solid $home-page-search-color;
             outline: 0;
-            color: $home-page-search-color
-
+            color: $home-page-search-color;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 600;
+            min-height: 50px;
+            max-height: 50px;
         }
 
         .search input[type="submit"]:hover {
-            pointer-events: none;
+            background-color: lighten($home-page-search-color, 30%);
+            color: #FFFFFF;
         }
+
     }
     
     .homepage-featured-articles {
@@ -92,6 +125,63 @@
                 .blocks-item-description {
                     color: #FFFFFF;
                 }
+            }
+
+            .blocks-item:hover {
+                background-color: lighten($home-page-search-color, 30%);
+            }
+
+            .blocks-item-title {
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 24px;
+                text-transform: uppercase;
+                margin-top: 50px;
+            }
+
+            .blocks-item-description {
+                margin-top: 10px;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+            }
+
+            .category-360005466052 {
+                background: url(unquote("$assets-hp-asset-1-svg"));
+                background-repeat: no-repeat;
+                background-position: center top 32px;
+                background-position-y: 40px;
+            }
+
+            .category-360005466032 {
+                background: url(unquote("$assets-hp-asset-2-svg"));
+                background-repeat: no-repeat;
+                background-position: center top 32px;
+            }
+
+            .category-360005479631 {
+                background: url(unquote("$assets-hp-asset-3-svg"));
+                background-repeat: no-repeat;
+                background-position: center top 32px;
+            }
+
+            .category-360005479611 {
+                background: url(unquote("$assets-hp-asset-4-svg"));
+                background-repeat: no-repeat;
+                background-position: center top 32px;
+            }
+
+            .category-360005479591 {
+                background: url(unquote("$assets-hp-asset-5-svg"));
+                background-repeat: no-repeat;
+                background-position: center top 32px;
+            }
+
+            .category-360005465932 {
+                background: url(unquote("$assets-hp-asset-6-svg"));
+                background-repeat: no-repeat;
+                background-position: center top 32px;
             }
         }
     }
