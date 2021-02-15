@@ -1,5 +1,18 @@
 @import "_variables.scss";
 
+@import "_article_page.scss";
+@import "_category_page.scss";
+@import "_document_head.scss";
+@import "_error_page.scss";
+@import "_footer.scss";
+@import "_header.scss";
+@import "_home_page.scss";
+@import "_new_request_page.scss";
+@import "_request_page.scss";
+@import "_requests_page.scss";
+@import "_search_results.scss";
+@import "_section_page.scss";
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -186,9 +199,9 @@ template {
 }
 
 body {
-  background-color: $background_color;
-  color: $text_color;
-  font-family: $text_font;
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $text-font;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
@@ -202,7 +215,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $heading_font;
+  font-family: $heading-font;
   font-weight: 400;
   margin-top: 0;
 }
@@ -225,7 +238,7 @@ h4 {
 }
 
 a {
-  color: $link_color;
+  color: $link-color;
   text-decoration: none;
 }
 
@@ -251,7 +264,7 @@ input:not([type="checkbox"]) {
 }
 
 input:not([type="checkbox"]):focus {
-  border: 1px solid $brand_color;
+  border: 1px solid $brand-color;
 }
 
 input[disabled] {
@@ -272,7 +285,7 @@ select {
 }
 
 select:focus {
-  border: 1px solid $brand_color;
+  border: 1px solid $brand-color;
 }
 
 select::-ms-expand {
@@ -289,7 +302,7 @@ textarea {
 }
 
 textarea:focus {
-  border: 1px solid $brand_color;
+  border: 1px solid $brand-color;
 }
 
 .container {
@@ -346,9 +359,9 @@ ul {
 /***** Buttons *****/
 .button, .split-button button, .section-subscribe button, .article-subscribe button, .community-follow button, .requests-table-toolbar .organization-subscribe button, .subscriptions-subscribe button, .pagination-next-link, .pagination-prev-link, .pagination-first-link, .pagination-last-link {
   background-color: transparent;
-  border: 1px solid $brand_color;
+  border: 1px solid $brand-color;
   border-radius: 4px;
-  color: $brand_color;
+  color: $brand-color;
   cursor: pointer;
   display: inline-block;
   font-size: 12px;
@@ -370,14 +383,14 @@ ul {
 }
 
 .button:hover, .split-button button:hover, .section-subscribe button:hover, .article-subscribe button:hover, .community-follow button:hover, .requests-table-toolbar .organization-subscribe button:hover, .subscriptions-subscribe button:hover, .pagination-next-link:hover, .pagination-prev-link:hover, .pagination-first-link:hover, .pagination-last-link:hover, .button:active, .split-button button:active, .section-subscribe button:active, .article-subscribe button:active, .community-follow button:active, .requests-table-toolbar .organization-subscribe button:active, .subscriptions-subscribe button:active, .pagination-next-link:active, .pagination-prev-link:active, .pagination-first-link:active, .pagination-last-link:active, .button:focus, .split-button button:focus, .section-subscribe button:focus, .article-subscribe button:focus, .community-follow button:focus, .requests-table-toolbar .organization-subscribe button:focus, .subscriptions-subscribe button:focus, .pagination-next-link:focus, .pagination-prev-link:focus, .pagination-first-link:focus, .pagination-last-link:focus, .button.button-primary, .split-button button.button-primary, .section-subscribe button.button-primary, .section-subscribe button[data-selected="true"], .article-subscribe button.button-primary, .article-subscribe button[data-selected="true"], .community-follow button.button-primary, .requests-table-toolbar .organization-subscribe button.button-primary, .requests-table-toolbar .organization-subscribe button[data-selected="true"], .subscriptions-subscribe button.button-primary, .subscriptions-subscribe button[data-selected="true"], .button-primary.pagination-next-link, .button-primary.pagination-prev-link, .button-primary.pagination-first-link, .button-primary.pagination-last-link {
-  background-color: $brand_color;
-  color: $brand_text_color;
+  background-color: $brand-color;
+  color: $brand-color;
   text-decoration: none;
 }
 
 .button.button-primary:hover, .split-button button:hover, .section-subscribe button.button-primary:hover, .section-subscribe button:hover[data-selected="true"], .article-subscribe button.button-primary:hover, .article-subscribe button:hover[data-selected="true"], .community-follow button.button-primary:hover, .requests-table-toolbar .organization-subscribe button.button-primary:hover, .requests-table-toolbar .organization-subscribe button:hover[data-selected="true"], .subscriptions-subscribe button.button-primary:hover, .subscriptions-subscribe button:hover[data-selected="true"], .button-primary.pagination-next-link:hover, .button-primary.pagination-prev-link:hover, .button-primary.pagination-first-link:hover, .button-primary.pagination-last-link:hover, .button.button-primary:focus, .split-button button.button-primary:focus, .section-subscribe button.button-primary:focus, .section-subscribe button:focus[data-selected="true"], .article-subscribe button.button-primary:focus, .article-subscribe button:focus[data-selected="true"], .community-follow button.button-primary:focus, .requests-table-toolbar .organization-subscribe button.button-primary:focus, .requests-table-toolbar .organization-subscribe button:focus[data-selected="true"], .subscriptions-subscribe button.button-primary:focus, .subscriptions-subscribe button:focus[data-selected="true"], .button-primary.pagination-next-link:focus, .button-primary.pagination-prev-link:focus, .button-primary.pagination-first-link:focus, .button-primary.pagination-last-link:focus, .button.button-primary:active, .split-button button.button-primary:active, .section-subscribe button.button-primary:active, .section-subscribe button:active[data-selected="true"], .article-subscribe button.button-primary:active, .article-subscribe button:active[data-selected="true"], .community-follow button.button-primary:active, .requests-table-toolbar .organization-subscribe button.button-primary:active, .requests-table-toolbar .organization-subscribe button:active[data-selected="true"], .subscriptions-subscribe button.button-primary:active, .subscriptions-subscribe button:active[data-selected="true"], .button-primary.pagination-next-link:active, .button-primary.pagination-prev-link:active, .button-primary.pagination-first-link:active, .button-primary.pagination-last-link:active {
-  background-color: darken($brand_color, 20%);
-  border-color: darken($brand_color, 20%);
+  background-color: darken($brand-color, 20%);
+  border-color: darken($brand-color, 20%);
 }
 
 .button[data-disabled], .split-button button[data-disabled], .section-subscribe button[data-disabled], .article-subscribe button[data-disabled], .community-follow button[data-disabled], .requests-table-toolbar .organization-subscribe button[data-disabled], .subscriptions-subscribe button[data-disabled], .pagination-next-link[data-disabled], .pagination-prev-link[data-disabled], .pagination-first-link[data-disabled], .pagination-last-link[data-disabled] {
@@ -386,10 +399,10 @@ ul {
 
 .button-large, input[type="submit"] {
   cursor: pointer;
-  background-color: $brand_color;
+  background-color: $brand-color;
   border: 0;
   border-radius: 4px;
-  color: $brand_text_color;
+  color: $brand-color;
   font-size: 14px;
   font-weight: 400;
   line-height: 2.72;
@@ -405,7 +418,7 @@ ul {
 }
 
 .button-large:hover, .button-large:active, .button-large:focus, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
-  background-color: darken($brand_color, 20%);
+  background-color: darken($brand-color, 20%);
 }
 
 .button-large[disabled], input[type="submit"][disabled] {
@@ -413,13 +426,13 @@ ul {
 }
 
 .button-secondary {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   border: 1px solid #ddd;
   background-color: transparent;
 }
 
 .button-secondary:hover, .button-secondary:focus, .button-secondary:active {
-  color: $text_color;
+  color: $text-color;
   border: 1px solid #ddd;
   background-color: darken($background_color, 3%);
 }
@@ -430,22 +443,22 @@ ul {
 }
 
 .split-button button {
-  background-color: $brand_color;
+  background-color: $brand-color;
   border: 0;
-  color: $brand_text_color;
+  color: $brand-color;
   height: 32px;
   line-height: 16px;
-  outline-color: $brand_color;
+  outline-color: $brand-color;
 }
 
 [dir="rtl"] .split-button button:not(:only-child):first-child {
-  border-left: 1px solid $brand_text_color;
+  border-left: 1px solid $brand-color;
   border-top-left-radius: unset;
   border-bottom-left-radius: unset;
 }
 
 [dir="ltr"] .split-button button:not(:only-child):first-child {
-  border-right: 1px solid $brand_text_color;
+  border-right: 1px solid $brand-color;
   border-top-right-radius: unset;
   border-bottom-right-radius: unset;
 }
@@ -486,7 +499,7 @@ ul {
 
 .table th,
 .table th a {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   font-size: 13px;
   font-weight: 300;
   text-align: left;
@@ -555,7 +568,7 @@ ul {
 }
 
 .form-field input:focus {
-  border: 1px solid $brand_color;
+  border: 1px solid $brand-color;
 }
 
 .form-field input[type="text"] {
@@ -564,7 +577,7 @@ ul {
 }
 
 .form-field input[type="text"]:focus {
-  border: 1px solid $brand_color;
+  border: 1px solid $brand-color;
 }
 
 .form-field input[type="checkbox"] {
@@ -580,13 +593,13 @@ ul {
 }
 
 .form-field .nesty-input:focus {
-  border: 1px solid $brand_color;
+  border: 1px solid $brand-color;
   text-decoration: none;
 }
 
 .form-field .hc-multiselect-toggle:focus {
   outline: none;
-  border: 1px solid $brand_color;
+  border: 1px solid $brand-color;
   text-decoration: none;
 }
 
@@ -599,12 +612,12 @@ ul {
 }
 
 .form-field .optional {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   margin-left: 4px;
 }
 
 .form-field p {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   font-size: 12px;
   margin: 5px 0;
 }
@@ -615,7 +628,7 @@ ul {
 }
 
 .form footer a {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   cursor: pointer;
   margin-right: 15px;
 }
@@ -636,7 +649,7 @@ ul {
 }
 
 .form .suggestion-list li a:visited {
-  color: $visited_link_color;
+  color: $visited_link-color;
 }
 
 /***** Header *****/
@@ -665,7 +678,7 @@ ul {
 
 .logo span {
   margin: 0 10px;
-  color: $brand_color;
+  color: $brand-color;
 }
 
 .logo a {
@@ -705,7 +718,7 @@ ul {
 
 .nav-wrapper a {
   border: 0;
-  color: $link_color;
+  color: $link-color;
   display: none;
   font-size: 14px;
   padding: 0 20px 0 0;
@@ -724,7 +737,7 @@ ul {
 
 .nav-wrapper a:hover, .nav-wrapper a:focus, .nav-wrapper a:active {
   background-color: transparent;
-  color: $link_color;
+  color: $link-color;
   text-decoration: underline;
 }
 
@@ -751,7 +764,7 @@ ul {
 .nav-wrapper .menu-button {
   background: none;
   border: 0;
-  color: $link_color;
+  color: $link-color;
   display: inline-block;
   margin-right: 10px;
   padding: 0;
@@ -777,7 +790,7 @@ ul {
 
 .nav-wrapper .menu-button:hover, .nav-wrapper .menu-button:focus, .nav-wrapper .menu-button:active {
   background-color: transparent;
-  color: $link_color;
+  color: $link-color;
 }
 
 .skip-navigation {
@@ -832,19 +845,19 @@ ul {
 
 .user-info > button {
   border: 0;
-  color: $link_color;
+  color: $link-color;
   min-width: 0;
   padding: 0;
   white-space: nowrap;
 }
 
 .user-info > button:hover, .user-info > button:focus {
-  color: $link_color;
+  color: $link-color;
   background-color: transparent;
 }
 
 .user-info > button::after {
-  color: $link_color;
+  color: $link-color;
   padding-right: 15px;
 }
 
@@ -888,11 +901,11 @@ ul {
 }
 
 .avatar .icon-agent {
-  color: $brand_color;
+  color: $brand-color;
   border: 2px solid #fff;
   border-radius: 50%;
   bottom: -4px;
-  background-color: $brand_text_color;
+  background-color: $brand-color;
   font-size: 17px;
   height: 17px;
   line-height: 17px;
@@ -903,18 +916,12 @@ ul {
 }
 
 /***** Footer *****/
-.footer {
-  border-top: 1px solid #ddd;
-  margin-top: 60px;
-  padding: 30px 0;
-}
 
 .footer a {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
 }
 
 .footer-inner {
-  max-width: 1160px;
   margin: 0 auto;
   padding: 0 5%;
   display: flex;
@@ -929,7 +936,7 @@ ul {
 }
 
 .footer-language-selector button {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   display: inline-block;
   font-weight: 300;
 }
@@ -947,7 +954,7 @@ ul {
 }
 
 .breadcrumbs li {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   display: inline;
   font-weight: 300;
   font-size: 13px;
@@ -962,7 +969,7 @@ ul {
 }
 
 .breadcrumbs li a:visited {
-  color: $link_color;
+  color: $link-color;
 }
 
 /***** Search field *****/
@@ -1116,10 +1123,10 @@ ul {
 }
 
 .blocks-item {
-  border: 1px solid $brand_color;
+  border: 1px solid $brand-color;
   border-radius: 4px;
   box-sizing: border-box;
-  color: $brand_color;
+  color: $brand-color;
   display: flex;
   flex: 1 0 340px;
   margin: 0 0 30px;
@@ -1134,11 +1141,11 @@ ul {
 }
 
 .blocks-item:hover, .blocks-item:focus, .blocks-item:active {
-  background-color: $brand_color;
+  background-color: $brand-color;
 }
 
 .blocks-item:hover *, .blocks-item:focus *, .blocks-item:active * {
-  color: $brand_text_color;
+  color: $brand-color;
   text-decoration: none;
 }
 
@@ -1155,11 +1162,11 @@ ul {
 }
 
 .blocks-item-internal a {
-  color: $text_color;
+  color: $text-color;
 }
 
 .blocks-item-link {
-  color: $brand_color;
+  color: $brand-color;
   padding: 20px 30px;
   display: flex;
   flex-direction: column;
@@ -1174,7 +1181,7 @@ ul {
 
 .blocks-item-link:focus {
   outline: 0;
-  box-shadow: 0 0 0 3px $brand_color;
+  box-shadow: 0 0 0 3px $brand-color;
   text-decoration: none;
 }
 
@@ -1246,7 +1253,7 @@ ul {
   display: block;
   border-bottom: 1px solid #ddd;
   padding: 15px 0;
-  color: $text_color;
+  color: $text-color;
 }
 
 .promoted-articles-item .icon-lock {
@@ -1304,7 +1311,7 @@ ul {
 
 .recent-activity-item-parent, .recent-activity-item-link {
   margin: 6px 0;
-  color: $text_color;
+  color: $text-color;
   display: inline-block;
   width: 100%;
 }
@@ -1337,7 +1344,7 @@ ul {
 }
 
 .recent-activity-item-time, .recent-activity-item-comment {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   display: inline-block;
   font-size: 13px;
   font-weight: 300;
@@ -1375,7 +1382,7 @@ ul {
 
 .recent-activity-comment-icon svg {
   vertical-align: middle;
-  color: $brand_color;
+  color: $brand-color;
   width: 16px;
   height: 16px;
 }
@@ -1437,7 +1444,7 @@ ul {
 }
 
 .section-tree-title a {
-  color: $text_color;
+  color: $text-color;
 }
 
 .section-tree .see-all-articles {
@@ -1451,11 +1458,11 @@ ul {
 }
 
 .article-list-item a {
-  color: $text_color;
+  color: $text-color;
 }
 
 .icon-star {
-  color: $brand_color;
+  color: $brand-color;
   font-size: 18px;
 }
 
@@ -1491,7 +1498,7 @@ ul {
 
 .section-list-item a {
   align-items: center;
-  color: $text_color;
+  color: $text-color;
   display: flex;
   justify-content: space-between;
 }
@@ -1623,7 +1630,7 @@ ul {
 }
 
 .article-body a:visited {
-  color: $visited_link_color;
+  color: $visited_link-color;
 }
 
 .article-body code {
@@ -1645,7 +1652,7 @@ ul {
 
 .article-body blockquote {
   border-left: 1px solid #ddd;
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   font-style: italic;
   padding: 0 15px;
 }
@@ -1668,7 +1675,7 @@ ul {
 }
 
 .article-comment-count {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   font-weight: 300;
 }
 
@@ -1678,7 +1685,7 @@ ul {
 
 .article-comment-count-icon {
   vertical-align: middle;
-  color: $brand_color;
+  color: $brand-color;
   width: 18px;
   height: 18px;
 }
@@ -1757,7 +1764,7 @@ ul {
 }
 
 .article-return-to-top a {
-  color: $text_color;
+  color: $text-color;
   display: block;
   padding: 20px 0;
 }
@@ -1778,7 +1785,7 @@ ul {
 
 .sidenav-item {
   border-radius: 4px;
-  color: $text_color;
+  color: $text-color;
   display: block;
   font-weight: 300;
   margin-bottom: 10px;
@@ -1786,8 +1793,8 @@ ul {
 }
 
 .sidenav-item.current-article, .sidenav-item:hover {
-  background-color: $brand_color;
-  color: $brand_text_color;
+  background-color: $brand-color;
+  color: $brand-color;
   text-decoration: none;
 }
 
@@ -1809,7 +1816,7 @@ ul {
 }
 
 .attachments .attachment-item .attachment-icon {
-  color: $text_color;
+  color: $text-color;
   left: 0;
   position: absolute;
   top: 5px;
@@ -1826,7 +1833,7 @@ ul {
 }
 
 .upload-dropzone span {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
 }
 
 /***** Social share links *****/
@@ -1845,12 +1852,12 @@ ul {
 }
 
 .share a {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
 }
 
 .share a:hover {
   text-decoration: none;
-  color: $brand_color;
+  color: $brand-color;
 }
 
 .share a svg {
@@ -1885,7 +1892,7 @@ ul {
 }
 
 .comment-callout {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   display: inline-block;
   font-weight: 300;
   font-size: 13px;
@@ -1893,7 +1900,7 @@ ul {
 }
 
 .comment-callout a {
-  color: $brand_color;
+  color: $brand-color;
 }
 
 .comment-sorter {
@@ -1902,7 +1909,7 @@ ul {
 }
 
 .comment-sorter .dropdown-toggle {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   font-weight: 300;
   font-size: 13px;
 }
@@ -1917,7 +1924,7 @@ ul {
 }
 
 .comment-wrapper.comment-official {
-  border: 1px solid $brand_color;
+  border: 1px solid $brand-color;
   padding: 40px 20px 20px;
 }
 
@@ -2041,7 +2048,7 @@ ul {
 }
 
 .comment-attachments a {
-  color: $brand_color;
+  color: $brand-color;
 }
 
 .comment-body {
@@ -2050,7 +2057,7 @@ ul {
   -webkit-hyphens: auto;
   word-break: break-word;
   word-wrap: break-word;
-  font-family: $text_font;
+  font-family: $text-font;
   line-height: 1.6;
   overflow-x: auto;
 }
@@ -2082,7 +2089,7 @@ ul {
 }
 
 .comment-body a:visited {
-  color: $visited_link_color;
+  color: $visited_link-color;
 }
 
 .comment-body code {
@@ -2104,7 +2111,7 @@ ul {
 
 .comment-body blockquote {
   border-left: 1px solid #ddd;
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   font-style: italic;
   padding: 0 15px;
 }
@@ -2126,7 +2133,7 @@ ul {
 }
 
 .vote-sum {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   display: block;
   margin: 3px 0;
 }
@@ -2142,7 +2149,7 @@ ul {
 
 .vote-up:hover,
 .vote-down:hover {
-  color: $brand_color;
+  color: $brand-color;
 }
 
 .vote-up, .vote-down {
@@ -2151,7 +2158,7 @@ ul {
   appearance: none;
   background-color: transparent;
   border: none;
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   cursor: pointer;
   min-height: 35px;
   min-width: 35px;
@@ -2161,11 +2168,11 @@ ul {
 }
 
 .vote-voted {
-  color: $brand_color;
+  color: $brand-color;
 }
 
 .vote-voted:hover {
-  color: darken($brand_color, 20%);
+  color: darken($brand-color, 20%);
 }
 
 /***** Actions *****/
@@ -2304,35 +2311,35 @@ ul {
 }
 
 .community-follow button:hover {
-  background-color: $brand_color;
+  background-color: $brand-color;
 }
 
 .community-follow button:hover::after, .community-follow button:focus::after {
-  border-color: $brand_text_color;
-  color: $brand_text_color;
+  border-color: $brand-color;
+  color: $brand-color;
 }
 
 .community-follow button[data-selected="true"] {
-  background-color: $brand_color;
-  color: $brand_text_color;
+  background-color: $brand-color;
+  color: $brand-color;
 }
 
 .community-follow button[data-selected="true"]::after {
-  border-left: 1px solid $brand_text_color;
-  color: $brand_text_color;
+  border-left: 1px solid $brand-color;
+  color: $brand-color;
 }
 
 .community-follow button[data-selected="true"]:hover {
-  background-color: darken($brand_color, 20%);
-  border-color: darken($brand_color, 20%);
+  background-color: darken($brand-color, 20%);
+  border-color: darken($brand-color, 20%);
 }
 
 .community-follow button::after {
-  border-left: 1px solid $brand_color;
+  border-left: 1px solid $brand-color;
   content: attr(data-follower-count);
-  color: $brand_color;
+  color: $brand-color;
   display: inline-block;
-  font-family: $heading_font;
+  font-family: $heading-font;
   margin-left: 15px;
   padding-left: 10px;
   position: absolute;
@@ -2347,7 +2354,7 @@ ul {
 
 [dir="rtl"] .community-follow button::after {
   border-left: 0;
-  border-right: 1px solid $brand_color;
+  border-right: 1px solid $brand-color;
   margin: 0 10px 0 0;
   padding: 0 10px 0 0;
 }
@@ -2379,7 +2386,7 @@ ul {
 }
 
 .striped-list-title {
-  color: $link_color;
+  color: $link-color;
   margin-bottom: 10px;
   margin-right: 5px;
 }
@@ -2389,7 +2396,7 @@ ul {
 }
 
 .striped-list-title:visited {
-  color: $visited_link_color;
+  color: $visited_link-color;
 }
 
 .striped-list .meta-group {
@@ -2397,7 +2404,7 @@ ul {
 }
 
 .striped-list-count {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   font-weight: 300;
   font-size: 13px;
   justify-content: flex-start;
@@ -2435,7 +2442,7 @@ ul {
 
 @media (min-width: 768px) {
   .striped-list-number {
-    color: $text_color;
+    color: $text-color;
     display: block;
     font-weight: 400;
   }
@@ -2461,7 +2468,7 @@ ul {
 }
 
 .status-label-pinned, .status-label-featured, .status-label-official {
-  background-color: $brand_color;
+  background-color: $brand-color;
 }
 
 .status-label-official {
@@ -2489,7 +2496,7 @@ ul {
 
 .status-label-not-planned, .status-label-closed {
   background-color: #e9ebed;
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
 }
 
 .status-label-pending, .status-label-pending-moderation {
@@ -2596,7 +2603,7 @@ ul {
 }
 
 .post-content {
-  font-family: $text_font;
+  font-family: $text-font;
   line-height: 1.6;
   word-break: break-word;
 }
@@ -2656,7 +2663,7 @@ ul {
 }
 
 .post-body a:visited {
-  color: $visited_link_color;
+  color: $visited_link-color;
 }
 
 .post-body code {
@@ -2678,7 +2685,7 @@ ul {
 
 .post-body blockquote {
   border-left: 1px solid #ddd;
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   font-style: italic;
   padding: 0 15px;
 }
@@ -2691,7 +2698,7 @@ ul {
 }
 
 .post-comment-count {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   font-weight: 300;
 }
 
@@ -2700,7 +2707,7 @@ ul {
 }
 
 .post-comment-count .icon-comments {
-  color: $brand_color;
+  color: $brand-color;
   display: inline-block;
   width: 18px;
   height: 18px;
@@ -2848,7 +2855,7 @@ ul {
 
 .collapsible-nav-toggle:focus {
   outline: none;
-  border: 1px solid $brand_color;
+  border: 1px solid $brand-color;
 }
 
 .collapsible-nav-list {
@@ -2863,7 +2870,7 @@ ul {
 }
 
 .collapsible-nav-list li {
-  color: $text_color;
+  color: $text-color;
   line-height: 45px;
   order: 1;
 }
@@ -2884,7 +2891,7 @@ ul {
 }
 
 .collapsible-nav-list li a {
-  color: $text_color;
+  color: $text-color;
   display: block;
 }
 
@@ -2925,14 +2932,14 @@ ul {
 @media (min-width: 768px) {
   .collapsible-nav-list li[aria-selected="true"],
   .collapsible-nav-list li.current {
-    border-bottom: 4px solid $brand_color;
+    border-bottom: 4px solid $brand-color;
     order: 1;
   }
 }
 
 .collapsible-nav-list li[aria-selected="true"] a,
 .collapsible-nav-list li.current a {
-  color: $text_color;
+  color: $text-color;
 }
 
 .collapsible-nav[aria-expanded="true"] li:not([aria-selected="true"]),
@@ -2998,7 +3005,7 @@ ul {
 
 .collapsible-sidebar-toggle:focus {
   outline: none;
-  border: 1px solid $brand_color;
+  border: 1px solid $brand-color;
 }
 
 .collapsible-sidebar-body {
@@ -3263,7 +3270,7 @@ ul {
 
 /* Contributions table */
 .contributions-table td:last-child {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   font-size: 13px;
   font-weight: 300;
 }
@@ -3277,7 +3284,7 @@ ul {
 }
 
 .no-activities {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
 }
 
 /***** Request *****/
@@ -3345,7 +3352,7 @@ ul {
 .request-main .comment-show-container {
   border-radius: 2px;
   border: 1px solid #ddd;
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   text-align: inherit;
   padding: 8px 25px;
   width: 100%;
@@ -3362,7 +3369,7 @@ ul {
 }
 
 .request-main .form-field.comment-ccs > ul[data-hc-focus="true"] {
-  border: 1px solid $brand_color;
+  border: 1px solid $brand-color;
 }
 
 .request-main .form-field.comment-ccs > input[type="text"] {
@@ -3378,7 +3385,7 @@ ul {
 }
 
 .request-main .comment-ccs + textarea:focus {
-  border-top: 1px solid $brand_color;
+  border-top: 1px solid $brand-color;
 }
 
 .request-main input#mark_as_solved {
@@ -3457,7 +3464,7 @@ ul {
 }
 
 .request-details dt {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   font-weight: 300;
   width: 40%;
 }
@@ -3560,7 +3567,7 @@ ul {
 }
 
 .meta-data {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   font-size: 13px;
   font-weight: 300;
 }
@@ -3692,7 +3699,7 @@ ul {
 }
 
 .profile-stats .stat-label {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   font-weight: 300;
   flex: 0 0 100px;
   margin-right: 10px;
@@ -3806,9 +3813,9 @@ ul {
 
 .profile-private-badge {
   flex-basis: 100%;
-  border: solid 1px $brand_color;
+  border: solid 1px $brand-color;
   border-radius: 4px;
-  color: $brand_color;
+  color: $brand-color;
   padding: 5px 20px;
   font-size: 12px;
   text-align: center;
@@ -3853,7 +3860,7 @@ ul {
 .profile-section-description {
   flex-basis: 100%;
   padding: 10px 0;
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   font-weight: 300;
   font-size: 13px;
   white-space: nowrap;
@@ -3951,7 +3958,7 @@ ul {
 }
 
 .profile-badges-item-description, .profile-badges-item-metadata-description {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   font-size: 13px;
   margin: 0;
 }
@@ -4287,7 +4294,7 @@ ul {
   cursor: pointer;
   display: block;
   padding: 10px;
-  color: $link_color;
+  color: $link-color;
 }
 
 .search-results-sidebar .see-all-filters[aria-hidden="true"] {
@@ -4388,7 +4395,7 @@ ul {
 }
 
 .search-result-votes, .search-result-meta-count {
-  color: lighten($text_color, 20%);
+  color: lighten($text-color, 20%);
   display: inline-block;
   font-size: 13px;
   font-weight: 300;
@@ -4397,7 +4404,7 @@ ul {
 }
 
 .search-result-votes-icon, .search-result-meta-count-icon {
-  color: $brand_color;
+  color: $brand-color;
   vertical-align: middle;
   width: 13px;
   height: 13px;

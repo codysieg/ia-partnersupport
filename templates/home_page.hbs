@@ -11,7 +11,7 @@
         <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor" />
         <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5" />
       </svg>
-      {{search submit=true instant=settings.instant_search class='search search-full' placeholder="Search our articles"}}
+      {{search submit=true instant=true class='search search-full' placeholder="Search our articles"}}
 
     {{#if promoted_articles}}
    <section class="hero-popular-help-topics">
@@ -20,8 +20,16 @@
         {{#each sections}}
           {{#each articles}}
           {{#each labels}}
-            {{#is identifier 'popular_articles'}}
-                <a href={{../url}}>{{../body}}</a>
+            {{#is identifier 'popular_article_order_1'}}
+                <a class={{identifier}} href={{../url}}>{{../title}}</a>
+            {{else}}
+            {{/is}}
+            {{#is identifier 'popular_article_order_2'}}
+                <a class={{identifier}} href={{../url}}>{{../title}}</a>
+            {{else}}
+            {{/is}}
+            {{#is identifier 'popular_article_order_3'}}
+                <a class={{identifier}} href={{../url}}>{{../title}}</a>
             {{/is}}
           {{/each}}
           {{/each}}
@@ -67,7 +75,7 @@
     </div>
   </div>
 
-    <section class="promoted-articles">
+    <section class="promoted-articles-bottom">
 
     {{#if promoted_articles}}
     <section class="articles">

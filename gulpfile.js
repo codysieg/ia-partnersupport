@@ -9,7 +9,7 @@ var concat = require('gulp-concat');
 sass.compiler = require('node-sass');
 
 gulp.task('sass', function () {
-   return gulp.src('./sass/**/*.scss')
+   return gulp.src('./sass/**/_global.scss')
    .pipe(concat('style.scss'))
    .pipe(sass().on('error', sass.logError))
    .pipe(gulp.dest('./'));
