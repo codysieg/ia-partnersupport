@@ -1,5 +1,4 @@
-<div class="container-divider"></div>
-<div class="container">
+<div class="category container">
   <nav class="sub-nav">
     {{breadcrumbs}}
     <div class="search-container">
@@ -7,7 +6,7 @@
         <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
         <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
       </svg>
-      {{search submit=false}}
+      {{search submit=false placeholder="Search our articles"}}
     </div>
   </nav>
 
@@ -58,6 +57,13 @@
           </i>
         {{/each}}
       </div>
+    </div>
+  </div>
+
+  <div class="new-request-container" id="new-request-container">
+    <div class="new-request-wrapper">
+      <h2 class="answer-not-found">Can't find what you're looking for?</h2>
+      <a class="button submit-a-request" role="button" href="#">Contact Us</a>
     </div>
   </div>
 </div>
