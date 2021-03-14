@@ -1,9 +1,9 @@
 .header-wrapper {
     display: block;
     width: 100%;
-    background-color: FFFFFF;
+    background-color: $home-page-search-color;
     .header{
-        background-color: #FFFFFF;
+        background-color: $home-page-search-color;
 
         .logo img{
             min-width: 200px;
@@ -13,7 +13,7 @@
         .nav {
             a {
                 font-family: $text-font;
-                color: $text-color;
+                color: $link-color;
             }
             svg {
                 height: 12px;

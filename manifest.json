@@ -6,53 +6,6 @@
   "default_locale": "en-us",
   "settings": [
     {
-      "label": "colors_group_label",
-      "variables": [
-        {
-          "identifier": "brand_color",
-          "type": "color",
-          "description": "brand_color_description",
-          "label": "brand_color_label",
-          "value": "#17494D"
-        },
-        {
-          "identifier": "brand_text_color",
-          "type": "color",
-          "description": "brand_text_color_description",
-          "label": "brand_text_color_label",
-          "value": "#FFFFFF"
-        },
-        {
-          "identifier": "text_color",
-          "type": "color",
-          "description": "text_color_description",
-          "label": "text_color_label",
-          "value": "#2F3941"
-        },
-        {
-          "identifier": "link_color",
-          "type": "color",
-          "description": "link_color_description",
-          "label": "link_color_label",
-          "value": "#1F73B7"
-        },
-        {
-          "identifier": "visited_link_color",
-          "type": "color",
-          "description": "visited_link_color_description",
-          "label": "visited_link_color_label",
-          "value": "#4B61C3"
-        },
-        {
-          "identifier": "background_color",
-          "type": "color",
-          "description": "background_color_description",
-          "label": "background_color_label",
-          "value": "#FFFFFF"
-        }
-      ]
-    },
-    {
       "label": "fonts_group_label",
       "variables": [
         {
@@ -284,7 +237,7 @@
           "type": "checkbox",
           "description": "article_comments_description",
           "label": "article_comments_label",
-          "value": true
+          "value": false
         },
         {
           "identifier": "show_follow_article",
@@ -298,7 +251,7 @@
           "type": "checkbox",
           "description": "recently_viewed_articles_description",
           "label": "recently_viewed_articles_label",
-          "value": true
+          "value": false
         },
         {
           "identifier": "show_related_articles",
@@ -312,7 +265,7 @@
           "type": "checkbox",
           "description": "article_sharing_description",
           "label": "article_sharing_label",
-          "value": true
+          "value": false
         }
       ]
     },

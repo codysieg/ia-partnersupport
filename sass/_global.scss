@@ -1,74 +1,4 @@
-/***** Base *****/
-/***** Buttons *****/
-/***** Split button *****/
-/***** Tables *****/
-/***** Forms *****/
-/***** Header *****/
-/***** User info in header *****/
-/***** User avatar *****/
-/***** Footer *****/
-/***** Breadcrumbs *****/
-/***** Search field *****/
-/***** Hero component *****/
-/***** Blocks *****/
-/* Used in Homepage#categories and Community#topics */
-/***** Homepage *****/
-/***** Promoted articles *****/
-/***** Community section in homepage *****/
-/***** Recent activity *****/
-/***** Category pages *****/
-/***** Section pages *****/
-/***** Article *****/
-/***** Attachments *****/
-/* Styles attachments inside posts, articles and comments */
-/***** Social share links *****/
-/***** Comments *****/
-/* Styles comments inside articles, posts and requests */
-/***** Vote *****/
-/* Used in article comments, post comments and post */
-/***** Actions *****/
-/* Styles admin and en user actions(edit, delete, change status) in comments and posts */
-/***** Community *****/
-/* Community topics grid */
-/* Community topic page */
-/* Topic, post and user follow button */
-/***** Striped list *****/
-/* Used in community posts list and requests list */
-/***** Status labels *****/
-/* Styles labels used in posts, articles and requests */
-/***** Post *****/
-/*
-* The post grid is defined this way:
-* Content | Sidebar
-* 70%     | 30%
-*/
-/***** Community Badges *****/
-/* Styles labels used next to the authors of article comments, community posts, and community comments */
-/* Navigation element that collapses on mobile */
-/* Sidebar navigation that collapses on mobile */
-/***** My activities *****/
-/* Requests table */
-/* Following table */
-/* Contributions table */
-/***** Request *****/
-/***** Pagination *****/
-/***** Metadata *****/
-/* User Profiles */
-/***** Search results *****/
-/* By default use bold instead of italic to highlight */
-/* Add a yellow background for Chinese */
-/***** Notifications *****/
-/* Error */
-/* Notice */
-/* Alert / Lock */
-/* Dismiss button */
-/* Inline notifications */
-/**
-* Remove the 'x' from search bar functionality.
-*/
-
 @import "_variables.scss";
-
 @import "_article_page.scss";
 @import "_category_page.scss";
 @import "_document_head.scss";
@@ -91,7 +21,6 @@ body {
 	background-color: $background-color;
 	color: $text-color;
 	font-family: $text-font;
-	font-size: 15px;
 	font-weight: 400;
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
@@ -100,22 +29,13 @@ main {
 	display: block;
 }
 h1 {
-	font-size: 2em;
+  font-family: $heading-font;
+  font-size: $h1-text-size;
 	margin: 0.67em 0;
-	font-family: $heading-font;
-	font-weight: 400;
+	font-weight: 500;
 	margin-top: 0;
-	font-size: 32px;
 }
-hr {
-	box-sizing: content-box;
-	height: 0;
-	overflow: visible;
-}
-pre {
-	font-family: monospace, monospace;
-	font-size: 1em;
-}
+
 a {
 	background-color: transparent;
 	color: $link-color;
@@ -1928,22 +1848,45 @@ input[type="submit"][disabled] {
 			&:visited {
 				color: $link-color;
 			}
+			text-decoration: underline;
 		}
 	}
 }
 .search {
-	position: relative;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  width: 530px;
+  font-size: 16px;
+  
 	input[type="search"] {
-		border: 1px solid $home-page-search-color;
+    border: 1px solid $search-bar-border-color;
+    background-color: #FFFFFF;
 		box-sizing: border-box;
 		color: $home-page-search-color;
 		height: 40px;
 		padding-left: 40px;
 		padding-right: 20px;
-		-webkit-appearance: none;
 		width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
 	}
 }
+
+#query {
+  max-width: 100%;
+  color: rgb(71, 71, 71);
+  height: 46px;
+}
+
+#query::placeholder {
+  font-size: 16px;
+}
+
 .search-full {
 	input[type="search"] {
 		border: 1px solid #fff;
@@ -1975,7 +1918,7 @@ input[type="submit"][disabled] {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
-	max-width: 610px;
+	max-width: 720px;
 	margin: 0 auto;
 }
 .page-header {
@@ -2236,7 +2179,7 @@ input[type="submit"][disabled] {
 }
 .section-tree {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	.section {
@@ -2248,8 +2191,8 @@ input[type="submit"][disabled] {
 	}
 }
 .section-tree-title {
-	margin-bottom: 0;
-	font-size: 18px;
+	margin-bottom: 14px;
+	font-size: 20px;
 	font-weight: 600;
 	a {
 		color: $text-color;
@@ -2258,6 +2201,7 @@ input[type="submit"][disabled] {
 .article-list-item {
 	font-size: 16px;
 	padding: 15px 0;
+	border-bottom: 1px solid #ddd;
 	a {
 		color: $text-color;
 	}
@@ -2269,6 +2213,7 @@ input[type="submit"][disabled] {
 .section-container {
 	display: flex;
 	justify-content: flex-end;
+	margin-bottom: 64px;
 }
 .section-content {
 	flex: 1;
@@ -2280,9 +2225,6 @@ input[type="submit"][disabled] {
 	border-bottom: 1px solid #ddd;
 	font-size: 16px;
 	padding: 15px 0;
-	&:first-child {
-		border-top: 1px solid #ddd;
-	}
 	a {
 		align-items: center;
 		color: $text-color;
@@ -2485,26 +2427,40 @@ input[type="submit"][disabled] {
 	transform: rotate(0.5turn);
 }
 .sidenav-title {
+	display: block;
 	font-size: 15px;
 	position: relative;
 	font-weight: 600;
+	margin-bottom: 10px;
 }
 .sidenav-item {
-	border-radius: 4px;
-	color: $text-color;
 	display: block;
-	font-weight: 300;
+	position: relative;
+	text-decoration: none;
+	padding: 0 10px 0;
+	border-radius: 4px;
+	font-size: 15px;
+	font-weight: 400;
+	color: lighten($link-color, 60%);
 	margin-bottom: 10px;
-	padding: 10px;
 	&:hover {
-		background-color: $brand-color;
-		color: $brand-color;
+		color: $link-color;
 		text-decoration: none;
 	}
 }
+
+.sidenav-item.current-article::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 2px;
+	height: 100%;
+	background-color: $ia-green; 
+}
+
 .sidenav-item.current-article {
-	background-color: $brand-color;
-	color: $brand-color;
+	color: $link-color;
 	text-decoration: none;
 }
 .recent-articles {
@@ -2515,6 +2471,10 @@ input[type="submit"][disabled] {
 .related-articles {
 	li {
 		margin-bottom: 15px;
+		a {
+			font-size: 15px;
+			text-decoration: underline;
+		}
 	}
 }
 .attachments {
@@ -4417,9 +4377,6 @@ input[type="search"] {
 			margin-left: 0;
 		}
 	}
-	.section-content {
-		flex: 0 0 80%;
-	}
 	.article {
 		flex: 1 0 66%;
 		max-width: 66%;
@@ -4467,6 +4424,9 @@ input[type="search"] {
 	}
 	.collapsible-sidebar-body {
 		display: block;
+		.article-sidebar-item {
+			text-decoration: underline;
+		}
 	}
 	.my-activities-table {
 		.striped-list-title {

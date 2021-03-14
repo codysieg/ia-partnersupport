@@ -10,9 +10,10 @@
         padding: 18px 5%;
         text-align: center;
         font-size: 16px;
-        background-color: lighten($home-page-search-color, 65%);
+        background-color: lighten($home-page-squares-background-color, 30%);
 
         .footer-product-feedback {
+            color: $link-color;
             font-weight: 700;
         }
     }
@@ -48,7 +49,7 @@
                 }
 
                 .small-paragraph {
-                    color: 333;
+                    color: #333;
                     font-size: 12px;
                     line-height: 19px;
                     font-weight: 400;
@@ -141,7 +142,7 @@
                     padding-left: 25px;
                     font-weight: 700;
                     font-size: 12px;
-                    color: 333;
+                    color: #333;
                     text-decoration: none;
                 }
 

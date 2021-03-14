@@ -7,13 +7,12 @@
         padding-bottom: 40px;
 
         .hero-inner {
-            max-width: 720px;
 
             .hero-popular-help-topics {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                color: #FFFFFF;
+                color: $brand-text-color;
                 margin: 16px 0;
                 font-family: sans-serif;
                 font-weight: 700;  
@@ -25,7 +24,7 @@
                         font-size: 16px;
                         font-family: $text-font;
                         line-height: 24px;
-                        color: #FFFFFF;
+                        color: $brand-text-color;
                         text-align: center;
                         text-decoration: underline;
                         margin-left: 4px;
@@ -58,10 +57,8 @@
 
         .hero-title {
             color: $brand-text-color;
-            font-size: $h1-text-size;
             margin-top: 0px;
             margin-bottom: 25px;
-            font-weight: 600;
         }
 
         .search {
@@ -71,7 +68,7 @@
             align-items: center;
             justify-content: center;
 
-            border: 1px solid #FFFFFF;
+            border: 1px solid $search-bar-border-color;
             box-sizing: border-box;
             padding-left: 40px;
             padding-right: 20px;
@@ -103,9 +100,9 @@
             min-width: 166px;
             margin: 16px 0;
             background-color: #FFFFFF;
-            border: 1px solid $home-page-search-color;
+            border: 1px solid $search-bar-border-color;
             outline: 0;
-            color: $home-page-search-color;
+            color: $brand-text-color;
             font-size: 20px;
             line-height: 24px;
             font-weight: 600;
@@ -115,7 +112,7 @@
 
         .search input[type="submit"]:hover {
             background-color: lighten($home-page-search-color, 30%);
-            color: #FFFFFF;
+            color: $brand-text-color;
         }
 
     }
@@ -131,8 +128,8 @@
             }
 
             .blocks-item {
-                border: 1px solid #FFFFFF;
-                background-color: $home-page-search-color;
+                border: 1px solid $ia-green;
+                background-color: $home-page-squares-background-color;
                 height: 304px;
                 transition: box-shadow 450ms;
 
@@ -143,16 +140,16 @@
                 text-align: center;
 
                 .blocks-item-title {
-                    color: #FFFFFF;
+                    color: $home-page-squares-text-color;
                 }
 
                 .blocks-item-description {
-                    color: #FFFFFF;
+                    color: $home-page-squares-text-color;
                 }
             }
 
             .blocks-item:hover {
-                background-color: lighten($home-page-search-color, 30%);
+                background-color: lighten($home-page-squares-background-color, 10%);
             }
 
             .blocks-item-title {
@@ -171,39 +168,31 @@
                 line-height: 24px;
             }
 
-            .category-360005466052 {
-                background: url(unquote("$assets-hp-asset-1-svg"));
+            //Security & Privacy
+            .category-1500000074082 {
+                background-image: url(unquote("$assets-screen_monitoring-svg"));
                 background-repeat: no-repeat;
                 background-position: center top 32px;
-                background-position-y: 40px;
+                fill: #fff;
             }
 
-            .category-360005466032 {
-                background: url(unquote("$assets-hp-asset-2-svg"));
-                background-repeat: no-repeat;
-                background-position: center top 32px;
-            }
-
-            .category-360005479631 {
-                background: url(unquote("$assets-hp-asset-3-svg"));
+            //Pick your LMS
+            .category-360005908633 {
+                background-image: url(unquote("$assets-learner_privacy-svg"));
                 background-repeat: no-repeat;
                 background-position: center top 32px;
             }
 
-            .category-360005479611 {
-                background: url(unquote("$assets-hp-asset-4-svg"));
+            //Updates
+            .category-360004696034 {
+                background-image: url(unquote("$assets-customizable_rules-svg"));
                 background-repeat: no-repeat;
                 background-position: center top 32px;
             }
 
-            .category-360005479591 {
-                background: url(unquote("$assets-hp-asset-5-svg"));
-                background-repeat: no-repeat;
-                background-position: center top 32px;
-            }
-
-            .category-360005465932 {
-                background: url(unquote("$assets-hp-asset-6-svg"));
+            //Integrations
+            .category-360005943653 {
+                background-image: url(unquote("$assets-ease_of_integration-svg"));
                 background-repeat: no-repeat;
                 background-position: center top 32px;
             }

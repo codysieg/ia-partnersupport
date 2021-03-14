@@ -1,0 +1,51 @@
+.section-page {
+
+    .article-list {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        
+        .article-list-item {
+            break-inside: avoid-column;
+        }
+    }
+
+    .new-request-container {
+        font-size: 24px;
+        font-weight: 600;
+
+        .new-request-wrapper {
+            display: flex;
+            justify-content: center;
+
+            border-bottom: 1px solid rgb(219, 219, 219);
+            border-top: 1px solid rgb(219, 219, 219);
+            padding: 24px 0;
+            text-align: center;
+            width: 100%;
+            .answer-not-found {
+                margin: 8px 0;
+                font-size: 22px;
+            }
+
+            .submit-a-request {
+                border: 1px solid $link-color;
+                color: $link-color;
+
+                font-size: 16px;
+
+                display: inline-block;
+                min-width: 166px;
+                text-align: center;
+                border-radius: 4px;
+                padding: 4px 2px;
+                margin: 0 36px;
+            }
+
+            .submit-a-request:hover {
+                color: #FFF;
+                background-color: $main-grey-color;
+            }
+        }
+    }
+}

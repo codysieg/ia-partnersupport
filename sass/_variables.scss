@@ -2,14 +2,21 @@ $background-color: #FFFFFF;
 $text-color: #2F3941;
 $text-font: "Poppins";
 $heading-font: "Poppins";
-$link-color: #1F73B7;
-$brand-color: #17494D;
+$link-color: #000;
+$ia-green: #66cc33;
+$brand-color: #66cc33;
 $visited-link-color: #4B61C3;
 
-$home-page-search-color: #1e385d;
+$search-bar-border-color: #4d4d4d;
 
-$brand-text-color: #FFFFFF;
+$home-page-search-color: #f3f3f3;
+
+$main-grey-color: #4d4d4d;
+
+$home-page-squares-background-color: lighten($main-grey-color, 10%);
+$home-page-squares-text-color: #fff;
+
+$brand-text-color: #000000;
 $h1-text-size: 30px;
-
 
 //Green #66cc33, Blue #1e385d
