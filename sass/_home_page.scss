@@ -128,8 +128,10 @@
             }
 
             .blocks-item {
-                border: 1px solid $ia-green;
+                border: 1px solid #000;
                 background-color: $home-page-squares-background-color;
+
+                box-shadow: 0 2px 4px 0 #000000;
                 height: 304px;
                 transition: box-shadow 450ms;
 
