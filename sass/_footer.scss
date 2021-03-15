@@ -10,7 +10,7 @@
         padding: 18px 5%;
         text-align: center;
         font-size: 16px;
-        background-color: lighten($home-page-squares-background-color, 30%);
+        background-color: $home-page-search-color;
 
         .footer-product-feedback {
             color: $link-color;

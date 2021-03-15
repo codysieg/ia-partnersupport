@@ -30,6 +30,10 @@
                         margin-left: 4px;
                     }
 
+                    a:hover {
+                        color: lighten($brand-text-color, 35%);
+                    }
+
                     .popular_article_order_1 {
                         display: block;
                         order: 1;
@@ -108,17 +112,19 @@
             font-weight: 600;
             min-height: 50px;
             max-height: 50px;
+
+            transition: background-color 300ms ease-out,color 300ms ease-out;
         }
 
         .search input[type="submit"]:hover {
-            background-color: lighten($home-page-search-color, 30%);
-            color: $brand-text-color;
+            color: #FFF;
+            background-color: $main-grey-color;
         }
 
     }
     
     .homepage-featured-articles {
-        background-color: $home-page-search-color !important;
+        background-color: $home-page-search-color;
 
         .container {
             margin: 0 auto;
@@ -131,7 +137,7 @@
                 border: 1px solid #000;
                 background-color: $home-page-squares-background-color;
 
-                box-shadow: 0 2px 4px 0 #000000;
+                //box-shadow: 0 2px 4px 0 #000000;
                 height: 304px;
                 transition: box-shadow 450ms;
 
@@ -171,7 +177,7 @@
             }
 
             //Security & Privacy
-            .category-1500000074082 {
+            .category-360005289534 {
                 background-image: url(unquote("$assets-screen_monitoring-svg"));
                 background-repeat: no-repeat;
                 background-position: center top 32px;
@@ -179,21 +185,21 @@
             }
 
             //Pick your LMS
-            .category-360005908633 {
+            .category-360005289514 {
                 background-image: url(unquote("$assets-learner_privacy-svg"));
                 background-repeat: no-repeat;
                 background-position: center top 32px;
             }
 
             //Updates
-            .category-360004696034 {
+            .category-1500000368602 {
                 background-image: url(unquote("$assets-customizable_rules-svg"));
                 background-repeat: no-repeat;
                 background-position: center top 32px;
             }
 
             //Integrations
-            .category-360005943653 {
+            .category-1500000303702 {
                 background-image: url(unquote("$assets-ease_of_integration-svg"));
                 background-repeat: no-repeat;
                 background-position: center top 32px;
